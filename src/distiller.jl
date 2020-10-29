@@ -1,7 +1,5 @@
 using JSON3
 using ProgressBars
-# using DataFrames
-# using CSV
 
 function distill(path::String, datafilter::RedditDataFilter)
     file = getfile(path)
