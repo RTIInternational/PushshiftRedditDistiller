@@ -1,7 +1,7 @@
 linevalue(key::String, value::String) = "\"$key\":\"$value\""
 
 function Base.contains(line::String, datafilter::RedditDataFilter)
-    if isempty(datafilter.author) && isempty(datafilter.author)
+    if isempty(datafilter.author) && isempty(datafilter.subreddit)
         return true
     else
         authorcheck = any(contains.(line, linevalue.("author", datafilter.author)))
@@ -11,7 +11,7 @@ function Base.contains(line::String, datafilter::RedditDataFilter)
 end
 
 function Base.contains(json::JSON3.Object, datafilter::RedditDataFilter)
-    if isempty(datafilter.author) && isempty(datafilter.author)
+    if isempty(datafilter.author) && isempty(datafilter.subreddit)
         return true
     else
         authorcheck = get(json, :author, nothing) ∈ datafilter.author
