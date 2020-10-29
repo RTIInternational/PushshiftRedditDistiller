@@ -110,7 +110,7 @@ julia> results = distill(datadep"reddit-comments-2006-04", filter)
 File: RC_2006-04.bz2; Threads: 3 ┣ ╱   ╱   ╱   ╱   ╱   ╱   ╱   ╱ ┫ 19090it 00:01 [35469.7 it/s]
 ```
 
-⚠️ **Note:** Records returned when multithreading is active will not be in the same order as they exist in the compressed file. If order is important, sort the results on an additional field (`created_utc`)
+⚠️ **Note:** Records returned when multithreading is active will not be in the same order as they exist in the compressed file. If order is important, sort the results on an additional field like `created_utc`.
 
 
 ## Filtering with `RedditDataFilter`

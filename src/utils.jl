@@ -11,17 +11,8 @@ decompression_codecs = Dict(
     "gz" => GzipDecompressorStream,
 )
 
-compression_codecs = Dict(
-    "bz2" => Bzip2CompressorStream,
-    "zst" => ZstdCompressorStream,
-    "xz" => XzCompressorStream,
-    "gz" => GzipCompressorStream,
-)
-
 get_decompressor_stream(filename::String) =
     get(decompression_codecs, split(filename, ".") |> last, NoopStream)
-get_compressor_stream(filename::String) =
-    get(compression_codecs, split(filename, ".") |> last, NoopStream)
 
 function getfile(path::String)
     if isdir(path)
