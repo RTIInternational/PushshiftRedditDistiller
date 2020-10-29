@@ -30,4 +30,9 @@ end
     test_subreddit_comments = distill(datadep"reddit-comments-sample", filter_subreddit)
     @test length(test_subreddit_comments) > 0
     @test all(get.(test_subreddit_comments, :subreddit, nothing) .== subreddit)
+
+    field = "created_utc"
+    filter_field = RedditDataFilter(fields=[field])
+    test_field_comments = distill(datadep"reddit-comments-sample", filter_field)
+    @test all(first.(keys.(test_field_comments)) .== Symbol(field))
 end
