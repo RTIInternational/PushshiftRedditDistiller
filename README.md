@@ -1,6 +1,17 @@
 # PushshiftRedditDistiller
 
+[![DOI](https://zenodo.org/badge/308441861.svg)](https://zenodo.org/badge/latestdoi/308441861)
+[![Build Status](https://travis-ci.org/RTIInternational/PushshiftRedditDistiller.svg?branch=main)](https://travis-ci.org/RTIInternational/PushshiftRedditDistiller)
+[![codecov](https://codecov.io/gh/RTIInternational/PushshiftRedditDistiller/branch/main/graph/badge.svg?token=MignPc2p7E)](undefined)
+
 This package is intended to assist with downloading, extracting, and distilling the monthly reddit data dumps made available through [pushshift.io](https://files.pushshift.io/reddit/).
+
+**Install**
+
+```julia
+pkg> add https://github.com/RTIInternational/PushshiftRedditDistiller
+```
+
 
 # Example Use
 
