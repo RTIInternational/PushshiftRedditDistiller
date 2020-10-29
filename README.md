@@ -110,7 +110,7 @@ All arguments are of type `Vector{String}`, though passing a single string to an
 
 **Note that no checking of correct field names is done for you, since the fields available change over time**
 
-```
+```julia
 julia> using Dates
 
 julia> timestamps_only = RedditDataFilter(fields=["created_utc"])
@@ -157,4 +157,16 @@ julia> ENV["DATADEPS_LOAD_PATH"] = download_path
 julia> ENV["DATADEPS_NO_STANDARD_LOAD_PATH"] = true
 ```
 
+### Accessing File Metadata
+
+These are used to create the datadeps. Useful in case you want to know the direct file names and want to use another data dependency management tool.
+
+
+```julia
+julia> PushshiftRedditDistiller.comments_metadata
+169-element Array{NamedTuple{(:file, :name),Tuple{String,String}},1}:
+ (file = "RC_2005-12.bz2", name = "2005-12")
+ ⋮
+ (file = "RC_2019-12.zst", name = "2019-12")
+```
 
