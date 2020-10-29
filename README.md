@@ -107,8 +107,10 @@ $ julia -t 3
 
 ```julia
 julia> results = distill(datadep"reddit-comments-2006-04", filter)
-File: RC_2006-04.bz2; Threads: 3 ┣ ╱   ╱   ╱   ╱   ╱   ╱   ╱   ╱   ╱ ┫ 19090it 00:01 [35469.7 it/s]
+File: RC_2006-04.bz2; Threads: 3 ┣ ╱   ╱   ╱   ╱   ╱   ╱   ╱   ╱ ┫ 19090it 00:01 [35469.7 it/s]
 ```
+
+⚠️ **Note:** Records returned when multithreading is active will not be in the same order as they exist in the compressed file. If order is important, sort the results on an additional field (`created_utc`)
 
 
 ## Filtering with `RedditDataFilter`
@@ -119,7 +121,7 @@ In addition, you can control which fields are returned with the `fields` argumen
 
 All arguments are of type `Vector{String}`, though passing a single string to an argument will convert it to a length 1 `Vector`.
 
-**Note that no checking of correct field names is done for you, since the fields available change over time**
+**Note that no checking of correct field names is done for you, since the fields available change over time.**
 
 ```julia
 julia> using Dates
@@ -148,7 +150,7 @@ julia> CSV.write("spez_comments.csv", spez_comments_df, quotestrings=true)
 
 ### Managing DataDeps
 
-Some of the files are large - if you were to download the whole archive it would be over one TB. Because of this, you may want to remove a file after use or change your DataDeps download directory to another drive.
+Some of the files are large - if you were to download the whole archive it would be over 1 TB. Because of this, you may want to remove a file after use or change your DataDeps download directory to another drive.
 
 **Removal**
 
