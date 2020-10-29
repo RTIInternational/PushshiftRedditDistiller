@@ -1,0 +1,24 @@
+name = "PushshiftRedditDistiller"
+uuid = "860182d5-2f7f-4b01-a084-d8f9ccad7d63"
+authors = ["Peter B <5107405+pmbaumgartner@users.noreply.github.com> and contributors"]
+version = "0.1.0"
+
+[deps]
+CodecBzip2 = "523fee87-0ab8-5b00-afb7-3ecf72e48cfd"
+CodecXz = "ba30903b-d9e8-5048-a5ec-d1f5b0d4b47b"
+CodecZlib = "944b1d66-785c-5afd-91f1-9de20f533193"
+CodecZstd = "6b39b394-51ab-5f42-8807-6242bab2b4c2"
+DataDeps = "124859b0-ceae-595e-8997-d05f6a7a8dfe"
+JSON3 = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
+Parameters = "d96e819e-fc66-5662-9728-84c9c7592b0a"
+ProgressBars = "49802e3a-d2f1-5c88-81d8-b72133a6f568"
+TranscodingStreams = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
