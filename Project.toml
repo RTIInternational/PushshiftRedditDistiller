@@ -16,6 +16,15 @@ TranscodingStreams = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
 
 [compat]
 julia = "1"
+TranscodingStreams = "0.9"
+CodecZstd = "0.7"
+CodecZlib = "0.7"
+CodecBzip2 = "0.7"
+CodecXz = "0.7"
+ProgressBars = "0.7"
+DataDeps = "0.7"
+Parameters = "0.12"
+JSON3 = "1.4"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
