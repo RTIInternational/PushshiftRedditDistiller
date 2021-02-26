@@ -22,7 +22,7 @@ CodecZstd = "0.7"
 DataDeps = "0.7"
 JSON3 = "1.4"
 Parameters = "0.12"
-ProgressBars = "0.7, 0.8"
+ProgressBars = "0.7, 0.8, 1.0"
 TranscodingStreams = "0.9"
 julia = "1"
 
